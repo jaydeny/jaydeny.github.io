@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>小恙博客</title>
@@ -40,35 +40,53 @@
 			top: 100px;
 			left: 350px;
 		}
-		#menu ul{
-			list-style:none;
-			line-height:10px;
-		}
-		#menu li{
+		#menu>div{
+			width:150px;
+			height:50px;
+			font-size:24px;
 			float:left;
-			display:block;
+			text-align:center;
+			line-height:50px;
 		}
 		#menu a{
-			font-size:30px;
-			color:#BDFFFF;
-			text-decoration:none;
 			display:block;
-			padding:0px 50px;
+			text-decoration:none;
+			color:#9FF;
 		}
 		#menu a:hover{
-			color: #00A8A8;
+			color: #00C1C1;
+			background-color:#FFF;
+			opacity:0.5;
 		}
 		#content{
-			border: 2px solid black;
 			width: 800px;
-			height: 600px;
 			position: absolute;
-			top: 200px;
+			top: 170px;
 			left: 350px;
 			font-size: 15px;
-			color: palegreen;
 		}
     </style>
+    <script src="jq/jquery-1.11.3.min.js"></script>
+    <script>
+    	$(function(){
+			$("#notes").click(function(){
+				$.get("index_notes.html",function(data){
+					$("#menu div").css("background","rgba(0,0,0,0)");
+					$("#menu div:first").css("background","#000");
+					$("#content").html(data);
+				});
+			});
+			$("#task").click(function(){
+				$.get("index_task.html",function(data){
+					$("#menu div").css("background","rgba(0,0,0,0)");
+					$("#menu div:nth-child(2)").css("background","#000");
+					$("#content").html(data);
+				});
+				
+			});
+			$("#notes").trigger("click");
+		});
+    </script>
 </head>
 <body>
 	<div id="title">
@@ -77,19 +95,15 @@
 		</div>
 	</div>
 	<div class="body">
-    <div id="head_port">
-    	<img src="head_portrait.jpeg" />
-    </div>
-	<div id="menu">
-		<ul>
-			<li><a href="http://www.baidu.com">笔记</a></li>
-			<li><a href="https://jaydeny.github.io">项目</a></li>
-			<li><a href="http://www.baidu.com">每日总结</a></li>
-		</ul>
-	</div>
-	<div id="content">
-		第一天，很懵逼的用这些软件！！！
-	</div>
+        <div id="head_port">
+            <img src="head_portrait.jpeg" />
+        </div>
+        <div id="menu">
+        	<div id="notes"><a>笔记</a></div>
+            <div id="task"><a>任务</a></div>
+        </div>
+        <div id="content">
+        </div>
 	</div>
 </body>
 </html>
