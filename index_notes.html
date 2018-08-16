@@ -10,18 +10,35 @@
 			}
 			#pingtai div{
 				border: 1px solid ghostwhite;
+				border-bottom: 2px solid gray;
 				width: 800px;
 				height: 100px;
 				background-color: whitesmoke;
 				opacity: 0.6;
 			}
+			#pingtai a{
+				text-decoration: none;
+				display: block;
+				color: black;
+			}
 		</style>
+		<script src="jq/jquery-1.11.3.min.js"></script>
+		<script>
+			var sum = [
+			{"id":"8月14日作业.html","name":"8月14日作业","date":"2018-8-14"},
+			{"id":"synchronized关键字和单例模式.html","name":"synchronized关键字和单例模式","date":"2018-8-14"}
+			];
+			$(function(){
+				$.each(sum,function(i,v){
+					var $div = $("<div>").appendTo("#pingtai");
+					$div.append("<h1><a href="+v.id+">"+v.name+"</a></h1>");
+					$div.append("<span>"+v.date+"</span>");
+				})
+			});
+		</script>
 	</head>
 	<body>
 		<div id="pingtai">
-			<div><h1>笔记</h1></div>	
 		</div>
-		
-		
 	</body>
 </html>
