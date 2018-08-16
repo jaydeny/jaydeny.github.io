@@ -84,6 +84,13 @@
 				});
 				
 			});
+			$("#family").click(function(){
+				$.get("Family.html",function(data){
+					$("#menu div").css("background","rgba(0,0,0,0)");
+					$("#menu div:nth-child(3)").css("background","#000");
+					$("#content").html(data);
+				})
+			});
 			$("#notes").trigger("click");
 		});
     </script>
@@ -101,6 +108,7 @@
         <div id="menu">
         	<div id="notes"><a>笔记</a></div>
             <div id="task"><a>任务</a></div>
+            <div id="family"><a>家人</a></div>
         </div>
         <div id="content">
         </div>
