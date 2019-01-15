@@ -51,10 +51,12 @@
 									</div>
 									<div slot="bottom" class="demo-split-pane">
 											<h3>核心技术：熟练掌握Java编程语言，Java并发编程。</h3>
-											<h3>前端技术：熟练编写HTML,VUE,CSS,JavaScript并且熟练应用JQuery,BootStrap,ECharts等前端框架。</h3>
-											<h3>数据存储：熟练使用SQL Server、MySQL关系型数据库和非关系型数据库Redis进行数据库开发。</h3>
+											<h3>前端技术：熟练编写HTML,CSS,JavaScript并且熟练JQuery体系和VUE前端框架。</h3>
+											<h3>数据存储：熟练使用SQL Server、MySQL关系型数据库和NoSQL的Redis进行数据库开发。</h3>
 											<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;熟练掌握并使用SQL语言进行对数据库的操作，设计。</h3>
-											<h3>框架方面：熟练掌握Spring,Spring MVC,Spring Boot,Mybatis</h3>
+											<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;熟练编写储存过程。</h3>
+											<h3>框架方面：熟练掌握SSM三大框架，Spring Boot 框架。</h3>
+											<h3>后台技术：熟练AOP编程，构造者模式，工厂模式，单例模式以及Apache Shiro 验证技术</h3>
 											<h3>开发工具：熟练应用eclipse,InterlliJ IDEA,Dreamweaver,HBuilder主流开发工具</h3>
 									</div>
 							</Split>
@@ -63,27 +65,6 @@
 			</template>
 		</div>
 		
-		<div class="container">
-			<template>
-					<Card>
-						<div class="demo-split">
-							<Split v-model="split4" mode="vertical">
-									<div slot="top" class="demo-split-pane">
-											<h1 style="font-family: '楷体';">项目经历</h1>
-									</div>
-									<div slot="bottom" class="demo-split-pane">
-											<h3>项目名称：新淘购物</h3>
-											<h3>项目职位：担任项目组长</h3>
-											<h3>责任描述：在该项目中主要负责数据层，管理数据和表示层的编码工作</h3>
-											<h3>功能介绍：主要为了方便用户在网上购买新鲜食物，然后通过“支付宝”实现在线支付</h3>
-											<h3>开发周期：2017.10-2018.01</h3>
-											<h3>开发工具：Eclipse+HBulider+Photoshop</h3>
-									</div>
-							</Split>
-						</div>
-					</Card>
-			</template>
-		</div>
 		<div class="container">
 			<template>
 					<Card>
@@ -104,8 +85,32 @@
 					</Card>
 			</template>
 		</div>
+	
+		<div class="container">
+			<template>
+					<Card>
+						<div class="demo-split">
+							<Split v-model="split4" mode="vertical">
+									<div slot="top" class="demo-split-pane">
+											<h1 style="font-family: '楷体';">项目经历</h1>
+									</div>
+									<div slot="bottom" class="demo-split-pane">
+										<h3>敬请期待</h3>
+											<!-- <h3>项目名称：新淘购物</h3>
+											<h3>项目职位：担任项目组长</h3>
+											<h3>责任描述：在该项目中主要负责数据层，管理数据和表示层的编码工作</h3>
+											<h3>功能介绍：主要为了方便用户在网上购买新鲜食物，然后通过“支付宝”实现在线支付</h3>
+											<h3>开发周期：2017.10-2018.01</h3>
+											<h3>开发工具：Eclipse+HBulider+Photoshop</h3> -->
+									</div>
+							</Split>
+						</div>
+					</Card>
+			</template>
+		</div>
 	</div>
 </template>
+
 <script>
     export default {
         
@@ -145,7 +150,7 @@
 }
 .ivu-card{
 	width: 900px;
-	margin: 0px 240px;
+	margin: 0px auto;
 }
 .pic > img{
 	width: 180px;
